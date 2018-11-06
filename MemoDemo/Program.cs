@@ -33,13 +33,13 @@ namespace MemoDemo
                 return memo[n];
             }
 
-            expand(n);
+            Expand(n);
             var fib = Fibonacci(n - 1) + Fibonacci(n - 2);
             memo[n] = fib;
             return fib;
         }
 
-        private static void expand(int n)
+        private static void Expand(int n)
         {
             while (memo.Count <= n)
             {
